@@ -372,13 +372,14 @@ header > div {
         .photos {
             width: 100%;
             margin-top: 5%;
-
+            display: flex;
             img {
-                width: 33%;
+                width: 97%;
             }
             .container {
                 position: relative;
                 text-align: center;
+                width: 33%;
             }
             .text-on-image {
                 position: absolute;
@@ -846,21 +847,11 @@ footer {
 }
 
 @media (max-width: 1300px) {
-    .expensive-presents > .expensive-presents-div .photos {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        img {
-            width: 100%;
-        }
-    }
+    .expensive-presents .text-on-image,
     .expensive .brand-items {
         display: none;
     }
+
 }
 
 @media (max-width: 1000px) {
@@ -1037,7 +1028,4 @@ footer {
         margin-bottom: 20px;
     }
 
-    .expensive-presents > .expensive-presents-div .photos .text-on-image {
-        font-size: 18px;
-    }
 }
