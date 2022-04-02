@@ -40,7 +40,6 @@ for (let index = 0; index < buttons.length; index++) {
         borderButtons[index].style.display = "none";
     };
     buttons[index].onmouseout = () => {
-        if (window.innerWidth > 1800)
             borderButtons[index].style.display = "block";
     };
 

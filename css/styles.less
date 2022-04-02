@@ -269,7 +269,12 @@ header > div {
         }
     }
 }
-
+// .bottom {
+//     position: absolute;
+//     top: 90%;
+//     left: 50%;
+//     transform: translate(-50%, -90%);
+// }
 .salons {
     background: url(../images/salons/bcg.jpg);
     overflow: hidden;
@@ -324,7 +329,6 @@ header > div {
             padding: 15px 35px;
             margin-top: 5%;
             background-color: white;
-
             border: 1px solid rgba(51, 51, 51, 1);
         }
     }
@@ -371,6 +375,23 @@ header > div {
 
             img {
                 width: 33%;
+            }
+            .container {
+                position: relative;
+                text-align: center;
+            }
+            .text-on-image {
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -90%);
+                //styleName: p / 21r;
+                font-family: Gilroy;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 29px;
+                letter-spacing: 0em;
+                color: white;
             }
         }
         a {
@@ -1014,5 +1035,9 @@ footer {
     }
     .expensive-presents .ojjo_jewerly {
         margin-bottom: 20px;
+    }
+
+    .expensive-presents > .expensive-presents-div .photos .text-on-image {
+        font-size: 18px;
     }
 }
