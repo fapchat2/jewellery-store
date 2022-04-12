@@ -32,6 +32,7 @@ a {
     color: white;
     text-decoration: none;
 }
+
 button {
     text-align: center;
 }
@@ -39,6 +40,31 @@ button:hover,
 input[type="submit"] {
     cursor: pointer;
 }
+
+.expensive a,
+input[type="submit"],
+.expensive-presents-div a {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    -moz-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    -o-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.expensive a:hover,
+input[type="submit"]:hover,
+.expensive-presents-div a:hover {
+    outline: 0;
+}
+
+input[type="submit"]:hover {
+    color: black !important;
+    box-shadow: 0 0 40px 40px rgb(226, 226, 226) inset;
+}
+
+
+
+
+
 .outer-div {
     background: url(../images/expensive/bgc.jpg) no-repeat;
     background-size: 100% auto;
@@ -50,6 +76,17 @@ input[type="submit"] {
 
 header {
     height: 52+25px;
+    a:not(.icons a)::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: #ffffff;
+        transition: width 0.3s;
+    }
+    a:not(.icons a):hover::after {
+        width: 100%;
+    }
 }
 
 header .logo {
@@ -101,12 +138,7 @@ header > div {
         bottom: 3px;
         left: 10px;
     }
-    [href="#log/reg"] {
-        // margin-left: 40px;
-    }
-    .icons {
-        // margin-left: 40px;
-    }
+
     .icons a:nth-child(2) {
         margin-left: 22px;
         position: relative;
@@ -168,6 +200,11 @@ header > div {
             text-align: center;
             letter-spacing: 0.1em;
             text-transform: uppercase;
+        }
+
+        a:hover {
+            color: #333333;
+            box-shadow: 0 0 40px 40px white inset;
         }
     }
 }
@@ -330,6 +367,20 @@ header > div {
             margin-top: 5%;
             background-color: white;
             border: 1px solid rgba(51, 51, 51, 1);
+
+            -webkit-transition: box-shadow 300ms ease-in-out,
+                color 300ms ease-in-out;
+            -moz-transition: box-shadow 300ms ease-in-out,
+                color 300ms ease-in-out;
+            -o-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+        }
+
+        button:hover,
+        button:focus {
+            color: white;
+            outline: 0;
+            box-shadow: 0 0 40px 40px #333333 inset;
         }
     }
 }
@@ -413,6 +464,10 @@ header > div {
 
             margin: auto;
             margin-top: 5%;
+        }
+        a:hover {
+            color: #000000;
+            box-shadow: 0 0 40px 40px rgb(226, 226, 226) inset;
         }
     }
     .ojjo_jewerly {
@@ -644,6 +699,7 @@ footer {
     a {
         color: rgba(51, 51, 51, 1);
     }
+
     > div {
         // overflow: hidden;
 
@@ -851,7 +907,6 @@ footer {
     .expensive .brand-items {
         display: none;
     }
-
 }
 
 @media (max-width: 1000px) {
@@ -1027,5 +1082,4 @@ footer {
     .expensive-presents .ojjo_jewerly {
         margin-bottom: 20px;
     }
-
 }
